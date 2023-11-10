@@ -99,13 +99,13 @@ public class Controller extends Print {
 	private View memberUpdate() {
 		Member mb = (Member) sessionStorage.get("member");
 		if(mb == null) {
-			sessionStorage.put("view", View.MEMBER_UPDATE);
+			sessionStorage.put("view", View.MEMBER_UPDATE);//★
 			return View.MEMBER_LOGIN;
 		}
 		printMbUpdate(mb);
 		String syn = ScanUtil.nextLine("수정하시겠습니까 y/n");
 		if(syn.equalsIgnoreCase("y")) {
-			printMBUpdateDetail();
+			printMBUpdateDetail(); 
 			int select = ScanUtil.nextInt("수정 정보를 선택하세요");
 			List<Object> param = new ArrayList<>();
 			if(select == 1 || select == 5) {
@@ -193,7 +193,9 @@ public class Controller extends Print {
 		List<Object> param = new ArrayList<Object>();
 		param.add(id);
 		param.add(pass);
-		boolean chk = adService.login(param);
+		boolean chk = adService.login(param);//이 리스트를 파라미터로 전달
+		//반환된 chk값에 따라 
+		//인증이 성공하면 admin객체를 세션스토리지에서 가져와 환영메세지를 출력
 		if(chk) {
 			Admin ad = (Admin) sessionStorage.get("admin");
 			System.out.println(ad.getName()+"님 환영합니다.");
@@ -203,6 +205,37 @@ public class Controller extends Print {
 			return View.ADMIN_LOGIN;
 		}
 	}
+	
+	
+	private View adminLogin() {
+		//입력받기
+		
+		
+		//리스트에담기
+		
+		
+		//로그인service의login메소드에서 param값 가져오기
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	private View admin() {
 		

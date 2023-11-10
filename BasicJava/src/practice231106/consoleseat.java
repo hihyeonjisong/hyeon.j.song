@@ -53,7 +53,7 @@ package practice231106;
 
 	    private static void reserveSeat() {
 	        Scanner scanner = new Scanner(System.in);
-	        System.out.print("예매할 좌석의 행을 선택하세요 (1부터 " + numRows + "까지): ");
+	        System.out.print("예매할 좌석의 행을 선택하세요 (1부터 " + numRows +numSeatsPerRow + "까지): ");
 	        int row = scanner.nextInt();
 	        System.out.print("예매할 좌석의 열을 선택하세요 (1부터 " + numSeatsPerRow + "까지): ");
 	        int seat = scanner.nextInt();
