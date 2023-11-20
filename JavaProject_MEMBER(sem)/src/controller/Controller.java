@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import print.Print;
-import service.AdminService;
+import service.adminService;
 import service.MemberService;
 import util.ScanUtil;
 import util.View;
@@ -17,7 +17,7 @@ public class Controller extends Print {
 	// 세션
 	static public Map<String, Object> sessionStorage = new HashMap<>();
 	
-	AdminService adService = AdminService.getInstance();
+	adminService adService = adminService.getInstance();
 	MemberService mbService = MemberService.getInstance();
 	
 	public static void main(String[] args) {
@@ -207,35 +207,22 @@ public class Controller extends Print {
 	}
 	
 	
-	private View adminLogin() {
-		//입력받기
-		
-		
-		//리스트에담기
-		
-		
-		//로그인service의login메소드에서 param값 가져오기
-		
-		
-		
-		
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+//	private View adminLogin() {
+//		//입력받기
+//		
+//		
+//		//리스트에담기
+//		
+//		
+//		//로그인service의login메소드에서 param값 가져오기
+//		
+//		
+//		
+//		
+//	}
+//	
+//	
+
 
 	private View admin() {
 		

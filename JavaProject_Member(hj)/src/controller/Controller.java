@@ -210,31 +210,31 @@ public class Controller extends Print {
 //		return View.BOOK_LIST;
 //	}
 
-//	private View book_del() {
-//		printDelete();
-//		int select = ScanUtil.nextInt("메뉴를 선택하세요");
-//		switch (select) {
-//		case 1:
-//			int delNo = ScanUtil.nextInt("삭제할번호 선택");
-//			String del = ScanUtil.nextLine(delNo + "게시글을 삭제 하시겠습니까?(y/n)");
-//			if (del.equals("y")) {
-//				bookService.bookDel(delNo);
-//			}
-//			return View.BOOK_LIST;
-//		case 2:
-//			int pageNo = (int) sessionStorage.get("pageNo") + 1;
-//			sessionStorage.put("pageNo", pageNo);
-//			return View.BOOK_DEL;
-//		case 3:
-//			pageNo = (int) sessionStorage.get("pageNo") - 1;
-//			sessionStorage.put("pageNo", pageNo);
-//			return View.BOOK_DEL;
-//		case 4:
-//			return View.HOME;
-//		default:
-//			return View.BOOK_DEL;
-//		}
-//	}
+	private View book_del() {
+		printDelete();
+		int select = ScanUtil.nextInt("메뉴를 선택하세요");
+		switch (select) {
+		case 1:
+			int delNo = ScanUtil.nextInt("삭제할번호 선택");
+			String del = ScanUtil.nextLine(delNo + "게시글을 삭제 하시겠습니까?(y/n)");
+			if (del.equals("y")) {
+				bookService.bookDel(delNo);
+			}
+			return View.BOOK_LIST;
+		case 2:
+			int pageNo = (int) sessionStorage.get("pageNo") + 1;
+			sessionStorage.put("pageNo", pageNo);
+			return View.BOOK_DEL;
+		case 3:
+			pageNo = (int) sessionStorage.get("pageNo") - 1;
+			sessionStorage.put("pageNo", pageNo);
+			return View.BOOK_DEL;
+		case 4:
+			return View.HOME;
+		default:
+			return View.BOOK_DEL;
+		}
+	}
 
 //	private View book_Detail() {
 //		int bookNo = (int) sessionStorage.get("bookNo");

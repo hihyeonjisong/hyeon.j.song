@@ -5,8 +5,8 @@ package practice231106;
 
 	public class consoleseat {
 	    private static char[][] seatMap; // 좌석 맵을 저장할 배열
-	    private static int numRows = 5;
-	    private static int numSeatsPerRow = 10;
+	    private static int numRows = 4;
+	    private static int numSeatsPerRow = 16;
 
 	    public static void main(String[] args) {
 	        initializeSeatMap(numRows, numSeatsPerRow);

@@ -12,6 +12,23 @@ public class Print {
 		for(int i=0; i<num; i++) System.out.println();
 	}
 	
+	public void printReserveMenu() {
+		printVar();
+		System.out.println("1.기차 예매하기");
+		System.out.println("2.내 예매내역 조회하기");
+		System.out.println("3.내 예매내역 수정하기");
+		System.out.println("4.내 예매내역 취소하기");
+		System.out.println("5.로그아웃하기");
+		printVar();
+	}
+	
+	public void printTrain() {
+		System.out.println("출발지----------------");
+		System.out.println("1.서울");
+		System.out.println("2.대전");
+		System.out.println("3.");
+	}
+	
 	public void printMBUpdateDetail() {
 		printVar();
 		printLn(2);

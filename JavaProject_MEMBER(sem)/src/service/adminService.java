@@ -6,15 +6,15 @@ import controller.Controller;
 import dao.AdminDao;
 import vo.Admin;
 
-public class AdminService {
-	private static AdminService singleTon = null;
+public class adminService {
+	private static adminService singleTon = null;
 
-	private AdminService() {
+	private adminService() {
 	};
 
-	public static AdminService getInstance() {
+	public static adminService getInstance() {
 		if (singleTon == null) {
-			singleTon = new AdminService();
+			singleTon = new adminService();
 		}
 		return singleTon;
 	}

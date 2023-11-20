@@ -93,39 +93,39 @@ public class Controller extends Print{
 
 
 	//1.관리자-2.재고관리
-//	private View prodManage() {
-//		List<Product> list = productService.stock();
-//		pirntStockList(list);
-//		printStock();
-//		System.out.println("-----------------------------");
-//		int select  = ScanUtil.nextInt("원하는 번호를 선택하세요\s");
-//		System.out.println("-----------------------------");
-//		switch(select){
-//		case 1:
-//			return View.PROD_MOD;
-//		case 2:
-//			return View.PROD_SOLDOUT;
-//		case 3:
-//			return View.ADMIN;
-//		case 4:
-//			return View.HOME;
-//		default :
-//			return View.ADMIN;
-//		}
-//	}
-	
-	//1.관리자-2.재고관리
 	private View prodManage() {
 		List<Product> list = productService.stock();
 		pirntStockList(list);
-		String name = ScanUtil.nextLine("검색하고싶은 상품명을 입력하세요\s");
-		List<Object> param = new ArrayList();
-		param.add(name);
-		List<Product> l = productService.prodSearchList(param);
-//		System.out.println(l);
-		printSelectSearch(l);
-		return View.PROD_MOD2;
+		printStock();
+		System.out.println("-----------------------------");
+		int select  = ScanUtil.nextInt("원하는 번호를 선택하세요\s");
+		System.out.println("-----------------------------");
+		switch(select){
+		case 1:
+			return View.PROD_MOD;
+		case 2:
+			return View.PROD_SOLDOUT;
+		case 3:
+			return View.ADMIN;
+		case 4:
+			return View.HOME;
+		default :
+			return View.ADMIN;
+		}
 	}
+	
+	//1.관리자-2.재고관리
+//	private View prodManage() {
+//		List<Product> list = productService.stock();
+//		pirntStockList(list);
+//		String name = ScanUtil.nextLine("검색하고싶은 상품명을 입력하세요\s");
+//		List<Object> param = new ArrayList();
+//		param.add(name);
+//		List<Product> l = productService.prodSearchList(param);
+////		System.out.println(l);
+//		printSelectSearch(l);
+//		return View.PROD_MOD2;
+//	}
 
 	//1.관리자-1.전체 상품 조회
 	private View prodAll() {
@@ -181,9 +181,9 @@ public class Controller extends Print{
 		case 1:
 			return View.PROD_ALL;
 		case 2:
-			return View.PROD_MANAGE;
+			return View.PROD_MANAGE;//재고관리
 		case 3:
-			return View.PROD_REGIS;
+			return View.PROD_REGIS;//신규상품등록
 		case 4:
 			return View.HOME;
 		default :

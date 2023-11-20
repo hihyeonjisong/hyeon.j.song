@@ -1,4 +1,4 @@
-package dao;
+package dao;//pc11_1java ( prod_board 테이블)
 
 import java.util.List;
 import java.util.Map;
@@ -30,14 +30,14 @@ public class ProductDao {
 			List<Map<String, Object>> l = jdbc.selectList(sql, param);
 			return ConvertUtils.convertToList(l, Product.class);
 		}
-		public List<Product> admin() {
+		public List<Product> admin() {//전체리스트
 			String sql = "select no, name, price, prodbase, prodi, prodo, \r\n" + 
 						"(prodbase+prodi-prodo) prodj, SUBSTR(prodexp,0,10) prodexp\r\n" + 
 						"from product";
 			List<Map<String, Object>> l = jdbc.selectList(sql);
 			return ConvertUtils.convertToList(l, Product.class);
 		}
-		public List<Product> stock() {
+		public List<Product> stock() {//재고관리
 			String sql = "select no, name, price, prodbase, prodi, prodo, "
 					+ 	 "(prodbase+prodi-prodo) prodj, prodexp\r\n" 
 					+ 	 "from product";
